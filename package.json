@@ -1,0 +1,22 @@
+{
+  "name": "cms340_off_campus_housing",
+  "version": "1.0.0",
+  "description": "Jacob, Maria, Griffin",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gebe678/cms340_off_campus_housing.git"
+  },
+  "author": "Griffin Lehrer, Maria Morales, Jacob Buckelew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gebe678/cms340_off_campus_housing/issues"
+  },
+  "homepage": "https://github.com/gebe678/cms340_off_campus_housing#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
