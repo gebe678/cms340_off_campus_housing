@@ -25,7 +25,7 @@ connection.connect(function(err){
         return;
     }
 
-    console.log("connected as id " + connection.threadId);
+    console.log("Database connected as id " + connection.threadId);
 });
 
 
