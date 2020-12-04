@@ -6,6 +6,7 @@ const path = require("path");
 const app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true}));
 const port = 8080;
 
 // Variables required for the mysql database
@@ -33,6 +34,11 @@ connection.connect(function(err){
 
 app.use(express.static(__dirname + "/assets"));
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/index.html')));
+//app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/index.html')));
+app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname, '/index.html'));
+});
+
+app.post("")
 
 app.listen(port, () => console.log(`Server is listening on port ${port}!`));
