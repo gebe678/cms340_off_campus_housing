@@ -28,9 +28,9 @@ connection.connect(function(err){
     console.log("Database connected as id " + connection.threadId);
 });
 
-
-
-app.use(express.static(__dirname + "/assets"));
+app.use(express.static("public"));
+app.use(express.static(path.join(__dirname + "/assets")));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/index.html')));
 
