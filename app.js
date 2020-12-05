@@ -7,6 +7,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.raw());
 const port = 8080;
 
 // Variables required for the mysql database
@@ -39,6 +40,11 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 
-app.post("")
+app.post("/housingForm.html", function(req, res){
+    let dropdown = req.body.testText;
+
+    console.log(dropdown);
+    res.redirect('/');
+});
 
 app.listen(port, () => console.log(`Server is listening on port ${port}!`));
