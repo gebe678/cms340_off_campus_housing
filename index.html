@@ -118,12 +118,35 @@ body {
 
         <!-- All Bootstrap content must be enclosed in a container div -->
         <div class="container">
+
             
+
+            <!-- Modal -->
+            <div class="modal" id="myModal" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
             <div class="row">
                 
                 <div class="col-lg-12">
 
-                    <nav class="navbar navbar-expand-lg  navbar-light sticky-top" style="background-color: #e3f2fd">  
+                    <nav class="navbar navbar-expand-lg  navbar-light fixed-top" style="background-color: #e3f2fd">  
                         <a class="navbar-brand" href="#">Home </a>
 
                             <button 
@@ -141,9 +164,16 @@ body {
 
                         <div class="collapse navbar-collapse " id="navbarSupportedContent">     
                             <ul class="navbar-nav mr-4">
+
+                                <li class="nav-item"> 
+                                    <a class="nav-link" data-toggle="modal" data-target="#myModal">Filters</a>
+                                </li>
+
+                                
                                 <li class="nav-item">
                                     <a class="nav-link" data-value="about" href="#">About</a>        
                                 </li>  
+
                                 <li class="nav-item">
                                     <a class="nav-link " data-value="portfolio"href="#">Portfolio</a>    
                                 </li>
@@ -160,6 +190,9 @@ body {
                         </div><!-- </collapse navbar-collapse> -->
                     </nav>
 
+
+                    
+
                      <div  class="page-holder bg-cover" style="background-image: url(pictures/background.jpg); background-size: cover;">
                         <div class="overlay"></div>
                         <header class="text-center text-white py-5">
@@ -175,72 +208,12 @@ body {
                 </div> <!-- </col-lg-12> -->
                 
             </div> <!-- </row> -->
-                  <!-- navbar -->  
-
-                
-
-
-
-               <!--  <div class="bg">
-                    <img src="pictures/background.jpg" class="img-fluid" alt="Responsive image">   
-                </div>-->
             
-
-            <!--/.Mask-->
-            
-            
-            
-            <!-- The container must contain one or more row divs -->
-            <!--New changes-->
-
-            <!--New changes-->
-            <div class="row">
-            
-                <div class="col-12">
-                    <h1>Welcome to our awesome page!!</h1>
-                    <p>Some example text to show something on the page</p>
-                    <p>  Hello </p>
-                </div>   <!-- /col-12 --> 
-                
-            </div> <!-- /row -->
-
-            <div class="row">
-            
-                <div class="col-6">
-                    <h1>Welcome to our awesome page!!</h1>
-                    <p>Some example text to show something on the page</p>
-                    <p>  Hello </p>
-                </div>   <!-- /col-12 --> 
-                
-            </div> <!-- /row -->
-
-
-            <div class="row">
-
-                <div class="col-lg-6">
-                    
-                    <a href="https://www.paradiserealestateinternational.com/agents/521/Griffin-Lehrer/" target="_blank">
-                        <img src="pictures/background.jpg">
-                    </a>
-
-                </div> <!-- /col-lg-6 -->
-
-                <div class="col-lg-6">
-                    <p>Here is some example text on the other side of the page</p>
-                    <p>Maria this is a good example of the power bootstrap has</p>
-                    <p>Its pretty cool right!!!!</p>
-                    <p>Also you can click on my picture :)</p>
-                </div> <!-- /col-lg-6 -->
-
-            </div> <!-- /row -->
-            
-        </div> <!-- /container -->
-        
         <!-- JS, Popper.js, and jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script type="text/javascript" src='js/main.js'></script>
+        <script type="text/javascript" src='main.js'></script>
     </body>
     
 </html>
