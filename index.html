@@ -9,6 +9,9 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+        <!-- External local javascript files-->
+        <script src="javascript/formControl.js" defer></script>
+
         <!--Custom code goes under this tag-->
         <title>Awesome Title</title>
         
@@ -51,9 +54,10 @@
             <div clas="row">
                 <div class="col-lg-12">
                     <!-- Main form for inputting user information into the system -->
+                    <form action="housingForm" method="POST" id="housingFilters">
                         <div class="form-group">
-                            <label for="City">City:</label>
-                            <input type="text" name="City">
+                            <label for="city">City:</label>
+                            <input type="text" name="city">
                         </div> <!-- </form-group> -->
 
                         <div class="form-group">
@@ -63,25 +67,37 @@
 
                         <div class="form-group">
                             <label for="sqrFootage">Square Footage:</label>
-                            <input type="range" min="100" max="1500" id="sqrFootage" name="sqrFootage">
+                            <input type="range" min="100" max="1500" value="997" id="sqrFootage" name="sqrFootage">
                         </div> <!-- </form-group> -->
 
                         <div class="form-group">
                             <label for="numBeds">Number of Beds:</label>
-                            <input type="range" min="0" max="5" id="numBeds" name="numBeds">
+                            <input type="range" min="0" max="5"value=2 id="numBeds" name="numBeds">
+                        </div> <!-- </form-group> -->
+                        
+                        <div class="form-group">
+                            <label for="numBaths">Number of Baths:</label>
+                            <input type="range" min="0" max="5" value="1" id="numBaths" name="numBaths">
                         </div> <!-- </form-group> -->
 
                         <div class="form-group">
-                            <label for="numBaths">Number of Baths:</label>
-                            <input type="range" min="0" max="5" id="numBaths" name="numBaths">
+                            <label for="monthlyPrice">Monthly Price:</label>
+                            <input type="range" min="981" max="1500" value="1200"  id="monthlyPrice" name="monthlyPrice">
                         </div> <!-- </form-group> -->
 
+                        <div class="form-group">
+                            <label for="parking">Parking :</label>
+                            <input type="checkbox" id="parking" name="parking">
+                        </div> <!-- </form-group> -->
 
-                        
+                        <div class="form-group">
+                            <label for="distanceFromRollins">Distance From Rollins:</label>
+                            <input type="range" min="0" max="20" value="10 id="distanceFromRollins" name="distanceFromRollins">
+                        </div> <!-- </form-group> -->
 
                         <div class="form-group">
                             <input type="submit">
-                        </div>
+                        </div> <!-- </form-group> -->
 
                     </form>
                 </div> <!-- </col-lg-12 -->
@@ -94,6 +110,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </body>
     
 </html>
