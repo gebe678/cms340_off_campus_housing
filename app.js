@@ -41,10 +41,6 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 
-app.get('/housingForm.html', function(req, res){
-    res.sendFile(path.join(__dirname, "/housingForm.html"))
-});
-
 app.post("/introForm", function(req, res){
     let city = req.body.city;
 
