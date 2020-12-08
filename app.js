@@ -59,12 +59,12 @@ app.post("/housingForm", function(req, res){
     }
 
     let startQuery = "SELECT * FROM property";
-    let sqFootageQuery = "WHERE SqFootage LIKE " + sqFootage;
+    let sqFootageQuery = "WHERE SqFootage <= " + sqFootage;
     let numBedsQuery = "AND NumOfBeds LIKE " + numBeds;
     let numBathsQuery = "AND NumOfBaths LIKE " + numBaths;
-    let monthlyPriceQuery = "AND Monthlyprice LIKE " + monthlyPrice;
+    let monthlyPriceQuery = "AND Monthlyprice <= " + monthlyPrice;
     let parkingQuery = "AND Parking LIKE " + hasParking;
-    let distanceFromRollinsQuery = "AND DistanceToRollins LIKE " + distanceFromRollins;
+    let distanceFromRollinsQuery = "AND DistanceToRollins <= " + distanceFromRollins;
 
     let query = startQuery.concat(" ", sqFootageQuery, " ", numBedsQuery, " ", numBathsQuery, " ", monthlyPriceQuery, " ", distanceFromRollinsQuery);
 

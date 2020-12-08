@@ -1,0 +1,51 @@
+PropertyID,Street,City,Zipcode,SqFootage,NumOfBeds,NumofBaths,ApartmentComplex,Price,Parking,DistanceToRollins,URL,Image
+0,1701 Lee Rd,Winter Park,32789,997,2,1,The Lexington,1200,Y,10,https://www.zillow.com/b/the-lexington-at-winter-park-winter-park-fl-5Xhy3M/,pictures/Lexington.jpg
+1,351 S Northlake Blvd,Altamonte Springs,32701,608,1,1,Tiffany Oaks,1058,Y,23,https://www.zillow.com/b/tiffany-oaks-altamonte-springs-fl-5Xhy26/,pictures/TiffanyOaks.jpg
+2,895 Wymore Rd,Altamonte Springs,32714,800,1,1,The Preserve at Spring Lake,1065,Y,19,https://www.aspensquare.com/apartments/florida/altamonte-springs/the-preserve-at-spring-lake?utm_knock=z&utm_medium=cpc&utm_source=zillow&zgRef=zillow,pictures/ThePreserve.jpeg
+3,595 Lotus Landing Blvd,Altamonte Springs,32714,602,1,1,Lotus Landing,981,Y,19,https://www.zillow.com/b/lotus-landing-altamonte-springs-fl-5Xhy35/,pictures/LotusLanding.jpg
+4,1743 Semoran North Cir,Winter Park,32792,1112,2,1,Sapphire,1129,Y,12,https://www.zillow.com/b/sapphire-winter-park-apartments-winter-park-fl-5XhxqR/,pictures/Sapphire.jpg
+5,599 Calibre Crest Pkwy,Altamonte Springs,32714,601,1,1,The Crest,1020,Y,20,https://www.zillow.com/b/the-crest-at-altamonte-altamonte-springs-fl-5Xhxx3/,pictures/TheCrest.jpg
+6,220 S Semoran Blvd,Winter Park,32792,501,1,1,Indigo,1049,Y,10,https://www.zillow.com/homedetails/220-S-Semoran-Blvd-0V99100NZ-Winter-Park-FL-32792/2077089477_zpid/,pictures/Indigo.jpg
+7,270 Altamonte Bay Club Cir,Altamonte Springs,32701,827,1,1,Lakeshore ,1141,Y,21,https://www.zillow.com/b/lakeshore-at-altamonte-springs-altamonte-springs-fl-9hb5Yz/,pictures/Lakeshore.jpg
+8,569 Little River Loop,Altamonte Springs,32714,650,1,1,Edge at Lake Lotus,1035,Y,19,https://www.zillow.com/b/edge-at-lake-lotus-altamonte-springs-fl-5Xhy2P/,pictures/EdgeAtLakeLotus.jpg
+9,285 Uptown Blvd,Altamonte Springs,32701,890,1,1,The Lofts,1338,Y,22,https://www.zillow.com/b/the-lofts-at-uptown-altamonte-altamonte-springs-fl-5Xhy4h/,pictures/TheLofts.jpg
+10,2890 Red Lion Sq,Winter Park,32792,800,1,1,Serena Winter Park,1099,Y,9,https://www.zillow.com/b/serena-winter-park-winter-park-fl-5Xhxvr/,pictures/Serena.jpg
+11,2890 Red Lion Sq,Winter Park,32792,1000,2,2,Serena Winter Park,1349,Y,9,https://www.zillow.com/b/serena-winter-park-winter-park-fl-5Xhxvr/,pictures/Serena2.jpg
+12,480 Banyon Tree Cir,Maitland,32751,759,1,1,Carrington Park,925,Y,11,https://www.zillow.com/homedetails/480-Banyon-Tree-Cir-APT-104-Maitland-FL-32751/70483324_zpid/,pictures/CarringtonPark.jpg
+13,217 Georgetown Dr,Casselberry,32707,753,1,1,Lake Howell Arms,995,Y,12,https://www.zillow.com/homedetails/217-Georgetown-Dr-APT-A-Casselberry-FL-32707/2077237117_zpid/,pictures/LakeHowellArms.jpg
+14,2155 Fontebranda Loop,Casselberry,32730,695,1,1,Fountain Place,1099,Y,13,https://www.zillow.com/b/2155-fontebranda-loop-casselberry-fl-5Xhxyg/,pictures/FountainPlace.jpg
+15,2155 Fontebranda Loop,Casselberry,32730,985,2,2,Fountain Place,1349,Y,13,https://www.zillow.com/b/2155-fontebranda-loop-casselberry-fl-5Xhxyg/,pictures/FountainPlace2.jpg
+16,601 Trelago Way,Maitland,32751,640,1,1,Town Trelago,1190,Y,12,https://www.zillow.com/b/town-trelago-maitland-fl-BKzJpG/,pictures/TownTrelago.jpg
+17,601 Trelago Way,Maitland,32751,640,1,1,Town Trelago,1265,Y,12,https://www.zillow.com/b/town-trelago-maitland-fl-BKzJpG/,pictures/TownTrelago2.jpg
+18,3650 Summer Wind Dr,Winter Park,32792,792,1,1,Azure Winter Park,969,Y,10,https://www.zillow.com/b/azure-winter-park-winter-park-fl-5Xhxrn/,pictures/Azure.jpg
+19,3650 Summer Wind Dr,Winter Park,32792,1049,2,2,Azure Winter Park,1229,Y,10,https://www.zillow.com/b/azure-winter-park-winter-park-fl-5Xhxrn/,pictures/Azure2.jpg
+20,604 Laurel Cove Ct,Orlando,32825,703,1,1,The Woodlands Apartments,935,Y,23,https://www.zillow.com/b/the-woodlands-apartments-orlando-fl-5Xhy4q/,pictures/Woodlands.jpg
+21,4688 New Broad St,Orlando,32814,650,1,1,Post Lake at Baldwin Park,1265,Y,13,https://www.zillow.com/b/post-lake-at-baldwin-park-orlando-fl-5XsNRC/,pictures/PostLake.jpg
+22,4688 New Broad St,Orlando,32814,690,1,1,Post Lake at Baldwin Park,1285,Y,13,https://www.zillow.com/b/post-lake-at-baldwin-park-orlando-fl-5XsNRC/,pictures/PostLake2.jpg
+23,9000 Summit Centre Way,Orlando,32810,838,1,1,Brickstone Maitland Summit Apartments,1351,Y,18,https://www.zillow.com/b/brickstone-maitland-summit-apartments-orlando-fl-5XsybX/,pictures/Brickstone.jpg
+24,9000 Summit Centre War,Orlando,32810,875,1,1,Brickstone Maitland Summit Apartments,1435,Y,18,https://www.zillow.com/b/brickstone-maitland-summit-apartments-orlando-fl-5XsybX/,pictures/Brickstone2.jpg
+25,3024 N Power Dr,Orlando,32818,792,1,1,The Park at Highgate,900,Y,27,https://www.zillow.com/b/the-park-at-highgate-orlando-fl-5Xhy37/,pictures/ThePark.jpg
+26,895 Broadstone Way,Altamonte Springs,32714,576,1,1,IMT Maitland Pointe Apartments,1110,Y,17,https://www.zillow.com/b/imt-maitland-pointe-apartments-altamonte-springs-fl-9n6kZg/,pictures/IMT.jpg
+27,895 Broadstone Way,Altamonte Springs,32714,735,1,1,IMT Maitland Pointe Apartments,1155,Y,17,https://www.zillow.com/b/imt-maitland-pointe-apartments-altamonte-springs-fl-9n6kZg/,pictures/IMT2.jpg
+28,895 Broadstone Way,Altamonte Springs,32714,779,1,1,IMT Maitland Pointe Apartments,1215,Y,17,https://www.zillow.com/b/imt-maitland-pointe-apartments-altamonte-springs-fl-9n6kZg/,pictures/IMT3.jpg
+29,990 English Town Ln,Winter Springs,32708,850,1,1,Madison Riverwalk,1084,Y,19,https://www.zillow.com/b/madison-riverwalk-winter-springs-fl-5Xhy2k/,pictures/Madison.jpg
+30,990 English Town Ln,Winter Springs,32708,635,1,1,Madison Riverwalk,1121,Y,19,https://www.zillow.com/b/madison-riverwalk-winter-springs-fl-5Xhy2k/,pictures/Madison2.jpg
+31,5870 Sundown Cir,Orlando,32822,915,2,1,Rosehill Preserve,1221,Y,27,https://www.zillow.com/b/rosehill-preserve-orlando-fl-5hD8QC/,pictures/Rosehill.jpg
+32,11701 Heritage Estates Ave,Orlando,32825,1001,2,2,Heritage Estates,1480,Y,29,https://www.zillow.com/homedetails/11701-Heritage-Estates-Ave-328-Orlando-FL-32825/2077426828_zpid/,pictures/HeritageEstates.jpg
+33,10200 Falcon Pine Blvd,Orlando,32829,1000,2,2,Canterbury Cove,1225,Y,28,https://www.zillow.com/b/canterbury-cove-orlando-fl-5Xhxtj/,pictures/CanterburyCove.jpg
+34,10200 Falcon Pine Blvd,Orlando,32829,1000,2,2,Canterbury Cove,1330,Y,28,https://www.zillow.com/b/canterbury-cove-orlando-fl-5Xhxtj/,pictures/CanterburyCove2.jpg
+35,4746 S Rio Grande Ave,Orlando,32839,1048,2,2,Castilian Apartments,1265,Y,22,https://www.zillow.com/b/castilian-apartments-orlando-fl-BG6zFn/,pictures/Castilian.jpg
+36,4746 S Rio Grande Ave,Orlando,32839,740,1,1,Castilian Apartments,1049,Y,22,https://www.zillow.com/b/castilian-apartments-orlando-fl-BG6zFn/,pictures/Castilian2.jpg
+37,4708 Olive Branch Rd,Orlando,32811,684,1,1,Affinity at Millenia,1039,Y,22,https://www.zillow.com/b/affinity-at-millenia-orlando-fl-5XhxyF/,pictures/Affinity.jpg
+38,4708 Olive Branch Rd,Orlando,32811,718,1,1,Affinity at Millenia,1129,Y,22,https://www.zillow.com/b/affinity-at-millenia-orlando-fl-5XhxyF/,pictures/Affinity2.jpg
+39,2333 Lake Debra Rd,Orlando,32835,809,1,1,Harbortown,1150,Y,26,https://www.zillow.com/b/harbortown-orlando-fl-5Xhxvv/,pictures/Harbortown.jpg
+40,545 Nantucket Ct,Altamonte Springs,32714,1071,2,2,Boca Vista Apartments,1180,Y,22,https://www.zillow.com/b/boca-vista-apartments-altamonte-springs-fl-5Xhxw8/,pictures/BocaVista.jpg
+41,407 Alafaya Woods Blvd,Oviedo,32765,1100,2,2,Alafaya Woods,1284,Y,25,https://www.zillow.com/b/alafaya-woods-oviedo-fl-5XhxwY/,pictures/Alafaya.jpg
+42,407 Alafaya Woods Blvd,Oviedo,32765,1100,2,2,Alafaya Woods,1369,Y,25,https://www.zillow.com/b/alafaya-woods-oviedo-fl-5XhxwY/,pictures/Alafaya2.jpg
+43,2980 Grandeville Cir,Oviedo,32765,895,1,1,Grandeville at River Place,1195,Y,25,https://www.zillow.com/b/grandeville-at-river-place-oviedo-fl-5hJ33v/,pictures/Grandeville.jpg
+44,2980 Grandeville Cir ,Oviedo,32765,1220,2,2,Grandeville at River Place,1350,Y,25,https://www.zillow.com/b/grandeville-at-river-place-oviedo-fl-5hJ33v/,pictures/Grandeville2.jpg
+45,1700 Integra Land Way,Winter Springs,32708,857,1,1,Integra 360,1286,Y,20,https://www.zillow.com/b/integra-360-winter-springs-fl-BK9y8C/,pictures/Integra.jpg
+46,1700 Integra Land Way,Winter Springs,32708,1106,2,2,Integra 360,1480,Y,20,https://www.zillow.com/b/integra-360-winter-springs-fl-BK9y8C/,pictures/Integra2.jpg
+47,940 City Plaza Way,Oviedo,32765,813,1,1,Park Place Apartments,1214,Y,22,https://www.zillow.com/b/park-place-apartments-oviedo-fl-5gq36m/,pictures/ParkPlace.jpg
+48,940 City Plaza Way,Oviedo,32765,1160,2,2,Park Place Apartments,1429,Y,22,https://www.zillow.com/b/park-place-apartments-oviedo-fl-5gq36m/,pictures/ParkPlace2.jpg
+49,881 W Warren Ave,Longwood,32750,1143,2,2,Alta Longwood,1640,Y,19,https://www.zillow.com/b/alta-longwood-longwood-fl-9Q6XzF/,pictures/AltaLongwood.jpg
