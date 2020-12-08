@@ -42,6 +42,9 @@ function introControlMain()
 
         let dataForm = $(this).serialize();
 
+        let apartmentList = document.getElementById("apartmentTable");
+        apartmentList.removeChild(apartmentList.firstChild);
+
         $.post("/introForm", dataForm, function(apartmentInfo){
             
             for(let i = 0; i < apartmentInfo.street.length; i++)
@@ -53,7 +56,7 @@ function introControlMain()
             }
 
             printInfo(street, city, zipCode, apartmentComplex);
-
+            buildApartmentTable(street, city, zipCode, apartmentComplex);
                         
         })
     });
@@ -63,8 +66,30 @@ function printInfo(street, city, zip, apartComplex)
 {
     for(let i = 0; i < street.length; i++)
     {
-        console.log(street[i] + " " + city[i] + " " + zip[i] + " " + apartComplex[i]);
+        //console.log(street[i] + " " + city[i] + " " + zip[i] + " " + apartComplex[i]);
     }
+}
+
+function buildApartmentTable(street, city, zip, apartmentComplex)
+{
+    let apartmentList = document.getElementById("apartmentTable");
+
+    const listElements = document.createElement("p");
+    listElements.id = "list";
+
+    apartmentList.appendChild(listElements);
+
+    list = document.getElementById("list");
+    let address = "";
+    list.innerHTML = address;
+
+    for(let i = 0; i < street.length; i++)
+    {
+        console.log(zip[i] + " is the city");
+        address += " " + (i + 1) + ". " + street[i] + " " + city[i] + " " + zip[i] + " " + apartmentComplex[i] + "<br>";
+    }
+    
+    list.innerHTML = address;
 }
 
 formControlMain();
