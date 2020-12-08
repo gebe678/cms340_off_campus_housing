@@ -45,6 +45,48 @@ app.get('/housingForm.html', function(req, res){
     res.sendFile(path.join(__dirname, "/housingForm.html"))
 });
 
+app.post("/introForm", function(req, res){
+    let city = req.body.city;
+
+    let streetInfo = [];
+    let cityInfo = [];
+    let zipCodeInfo = [];
+    let apartmentComplexInfo = [];
+
+    let startQuery = "SELECT * FROM property";
+    let cityQuery = "WHERE City = " + "'" + city + "'";
+
+    let query = startQuery.concat(" ",cityQuery);
+
+    console.log(query);
+
+    connection.query(query, function(err, rows, fields){
+        if(err)
+        {
+            throw err;
+        }
+        
+        for(let i = 0; i < rows.length; i++)
+        {
+            //console.log(rows[i].Street + " " + rows[i].City + " " + rows[i].Zipcode + " " + rows[i].ApartmentComplex);
+            streetInfo.push(rows[i].Street);
+            cityInfo.push(rows[i].City);
+            zipCodeInfo.push(rows[i].Zipcode);
+            apartmentComplexInfo.push(rows[i].ApartmentComplex);
+        }
+
+        let info = {
+            "street": streetInfo,
+            "city": cityInfo,
+            "zipCode": zipCodeInfo,
+            "apartmentComplex": apartmentComplexInfo
+        }
+
+        //console.log(JSON.stringify(info));
+        res.send(info);
+     });
+});
+
 app.post("/housingForm", function(req, res){
     let city = req.body.city;
     let zipCode = req.body.zipCode;
