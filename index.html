@@ -8,7 +8,11 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
 
+        <!-- External local css files -->
+        <link rel="stylesheet" href="/css/styles.css">
         <!-- External local javascript files-->
         <script src="javascript/formControl.js" defer></script>
         <script src="javascript/rangeSync.js" defer></script>
@@ -19,93 +23,164 @@
     </head>
    
     <body>
-
+        <a href="/housingForm.html">marias page</a>
         <!-- All Bootstrap content must be enclosed in a container div -->
         <div class="container">
             
-            <!-- The container must contain one or more row divs -->
-            <div class="row">
-            
-                <div class="col-12">
-                    <h1>Welcome to our awesome page!!</h1>
-                    <p>Some example text to show something on the page</p>
-                </div>   <!-- /col-12 --> 
+            <div class="modal" id="myModal" role="dialog">
+                <div class="modal-dialog">
                 
-            </div> <!-- /row -->
-
-            <div class="row">
-
-                <div class="col-lg-6">
+                  <!-- Modal content-->
+                  <div class="modal-content">
                     
-                    <a href="https://www.paradiserealestateinternational.com/agents/521/Griffin-Lehrer/" target="_blank">
-                        <img src="pictures/sexyMan.jpg">
-                    </a>
-
-                </div> <!-- /col-lg-6 -->
-
-                <div class="col-lg-6">
-                    <p>Here is some example text on the other side of the page</p>
-                    <p>Maria this is a good example of the power bootstrap has</p>
-                    <p>Its pretty cool right!!!!</p>
-                    <p>Also you can click on my picture :)</p>
-                </div> <!-- /col-lg-6 -->
-
-            </div> <!-- /row -->
-
-            <div clas="row">
-                <div class="col-lg-12">
+                    <div class="modal-body">
+                      
                     <!-- Main form for inputting user information into the system -->
                     <form action="housingForm" method="POST" id="housingFilters">
                         <div class="form-group">
                             <label for="city">City:</label>
                             <input type="text" name="city">
                         </div> <!-- </form-group> -->
-
+                    
                         <div class="form-group">
                             <label for="zipCode">Zip Code:</label>
                             <input type="text" name="zipCode">
                         </div> <!-- </form-group> -->
-
+                    
                         <div class="form-group">
                             <label for="sqrFootage">Square Footage:</label>
                             <input type="range" min="100" max="1500" value="997" id="sqrFootage" name="sqrFootage">
                             <input type="number" min="100" max="1500" value="997" id="sqrFootageNum">
                         </div> <!-- </form-group> -->
-
+                    
                         <div class="form-group">
                             <label for="numBeds">Number of Beds:</label>
-                            <input type="range" min="0" max="5"value=2 id="numBeds" name="numBeds">
+                            <input type="range" min="0" max="5" value=2 id="numBeds" name="numBeds">
                             <input type="number" min="0" max="5" value="2" id="numBedsNum">
                         </div> <!-- </form-group> -->
-                        
+                    
                         <div class="form-group">
                             <label for="numBaths">Number of Baths:</label>
                             <input type="range" min="0" max="5" value="1" id="numBaths" name="numBaths">
                             <input type="number" min="0" max="5" value="1" id="numBathsNum">
                         </div> <!-- </form-group> -->
-
+                    
                         <div class="form-group">
                             <label for="monthlyPrice">Monthly Price:</label>
-                            <input type="range" min="981" max="1500" value="1200"  id="monthlyPrice" name="monthlyPrice">
+                            <input type="range" min="981" max="1500" value="1200" id="monthlyPrice" name="monthlyPrice">
                             <input type="number" min="981" max="1500" value="1200" id="monthlyPriceNum">
                         </div> <!-- </form-group> -->
-
+                    
                         <div class="form-group">
                             <label for="parking">Parking :</label>
                             <input type="checkbox" id="parking" name="parking">
                         </div> <!-- </form-group> -->
-
+                    
                         <div class="form-group">
                             <label for="distanceFromRollins">Distance From Rollins:</label>
                             <input type="range" min="0" max="20" value="10" id="distanceFromRollins" name="distanceFromRollins">
                             <input type="number" min="0" max="20" value="10" id="distanceFromRollinsNum">
                         </div> <!-- </form-group> -->
-
+                    
                         <div class="form-group">
                             <input type="submit">
                         </div> <!-- </form-group> -->
-
+                    
                     </form>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+  
+              <div class="row">
+                  
+                  <div class="col-lg-12">
+  
+                      <nav class="navbar navbar-expand-lg  navbar-light navbar-fixed-top" style="background-color: #e3f2fd">  
+                          <a class="navbar-brand" href="#">Off Campus Housing </a>
+  
+                              <button 
+                              class="navbar-toggler" 
+                              type="button" 
+                              data-toggle="collapse" 
+                              data-target="#navbarSupportedContent" 
+                              aria-controls="navbarSupportedContent" 
+                              aria-expanded="false" 
+                              aria-label="Toggle navigation"
+                              >
+  
+                              <span class="navbar-toggler-icon"></span>
+                          </button>
+  
+                          <div class="collapse navbar-collapse " id="navbarSupportedContent">     
+                              <ul class="navbar-nav mr-4">
+  
+                                  <li class="nav-item"> 
+                                      <a class="nav-link" data-toggle="modal" data-target="#myModal">Filters</a>
+                                  </li>
+  
+                                  
+                                  <li class="nav-item">
+                                      <a class="nav-link" data-value="about" href="#">About</a>        
+                                  </li>  
+  
+                                  <li class="nav-item">
+                                      <a class="nav-link " data-value="portfolio"href="#">Portfolio</a>    
+                                  </li>
+                                  <li class="nav-item"> 
+                                     <a class="nav-link " data-value="blog" href="#">Blog</a>         
+                                  </li>   
+                                  <li class="nav-item">  
+                                      <a class="nav-link " data-value="team" href="#">Team</a>       
+                                  </li>  
+                                  <li class="nav-item"> 
+                                      <a class="nav-link " data-value="contact" href="#">Contact</a>       
+                                  </li> 
+                              </ul> 
+                          </div><!-- </collapse navbar-collapse> -->
+                      </nav>
+  
+  
+                       <div  class="page-holder bg-cover d-flex align-items-center" style="background-image: url(pictures/background.jpg); background-size: cover;">
+                          
+                          <div class="description text-center ">
+                              <h1> Hello, welcome to this beautiful Website :)
+                                  <button class="btn btn-outline-secondary btn-lg">Search</button>
+                              </h1>
+                          </div>
+               
+                         
+                      </div>
+  
+  
+  
+                  </div> <!-- </col-lg-12> -->
+                  
+              </div> <!-- </row> -->
+  
+              <div class="row">
+                  <div class="col-lg-12">
+                      <!-- Footer -->
+                      <footer class="page-footer font-small blue">
+  
+                          <p>© Maria Morales, Jacob Buckelew, Griffin Lehrer -- Off Campus Housing</p>
+    
+                       </footer> 
+  
+                  </div> <!-- </col-lg-12> -->
+  
+              </div> <!-- </row> -->
+
+            
+
+            <div clas="row">
+                <div class="col-lg-12">
+
                 </div> <!-- </col-lg-12 -->
             </div> <!-- </row> -->
 
