@@ -2,18 +2,18 @@ function formControlMain()
 {
     let button = document.getElementById("housingFilters");
 
-    let street = [];
-    let city = [];
-    let zipCode = [];
-    let apartmentComplex = [];
-
     button.addEventListener("submit", function(){
         event.preventDefault();
+
+        let street = [];
+        let city = [];
+        let zipCode = [];
+        let apartmentComplex = [];
 
         let dataForm = $(this).serialize();
 
         $.post("/housingForm", dataForm, function(apartmentInfo){
-            
+
             for(let i = 0; i < apartmentInfo.street.length; i++)
             {
                 street.push(apartmentInfo.street[i]);
@@ -23,6 +23,7 @@ function formControlMain()
             }
 
             printInfo(street, city, zipCode, apartmentComplex);
+            buildApartmentTable(street, city, zipCode, apartmentComplex);
             
         })
     });
@@ -32,18 +33,16 @@ function introControlMain()
 {
     let button = document.getElementById("introForm");
 
-    let street = [];
-    let city = [];
-    let zipCode = [];
-    let apartmentComplex = [];
-
     button.addEventListener("submit", function(){
+        clearList();
         event.preventDefault();
 
-        let dataForm = $(this).serialize();
+        let street = [];
+        let city = [];
+        let zipCode = [];
+        let apartmentComplex = [];
 
-        let apartmentList = document.getElementById("apartmentTable");
-        apartmentList.removeChild(apartmentList.firstChild);
+        let dataForm = $(this).serialize();
 
         $.post("/introForm", dataForm, function(apartmentInfo){
             
@@ -73,23 +72,29 @@ function printInfo(street, city, zip, apartComplex)
 function buildApartmentTable(street, city, zip, apartmentComplex)
 {
     let apartmentList = document.getElementById("apartmentTable");
+    let address = "";
 
-    const listElements = document.createElement("p");
-    listElements.id = "list";
+    // const listElements = document.createElement("p");
+    // listElements.id = "list";
 
-    apartmentList.appendChild(listElements);
+    // apartmentList.appendChild(listElements);
 
     list = document.getElementById("list");
-    let address = "";
-    list.innerHTML = address;
 
     for(let i = 0; i < street.length; i++)
     {
-        console.log(zip[i] + " is the city");
         address += " " + (i + 1) + ". " + street[i] + " " + city[i] + " " + zip[i] + " " + apartmentComplex[i] + "<br>";
     }
-    
+
+    console.log(address);
     list.innerHTML = address;
+}
+
+function clearList()
+{
+    let list = document.getElementById("list");
+
+    list.innerHTML = "";
 }
 
 formControlMain();
