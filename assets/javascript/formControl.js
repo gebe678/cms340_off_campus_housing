@@ -9,6 +9,7 @@ function formControlMain()
         let city = [];
         let zipCode = [];
         let apartmentComplex = [];
+        let url = [];
 
         let dataForm = $(this).serialize();
 
@@ -20,10 +21,11 @@ function formControlMain()
                 city.push(apartmentInfo.city[i]);
                 zipCode.push(apartmentInfo.zipCode[i]);
                 apartmentComplex.push(apartmentInfo.apartmentComplex[i]);
+                url.push(apartmentInfo.url[i]);
             }
 
             printInfo(street, city, zipCode, apartmentComplex);
-            buildApartmentTable(street, city, zipCode, apartmentComplex);
+            buildApartmentTable(street, city, zipCode, apartmentComplex, url);
             
         })
     });
@@ -41,6 +43,7 @@ function introControlMain()
         let city = [];
         let zipCode = [];
         let apartmentComplex = [];
+        let url = [];
 
         let dataForm = $(this).serialize();
 
@@ -52,10 +55,11 @@ function introControlMain()
                 city.push(apartmentInfo.city[i]);
                 zipCode.push(apartmentInfo.zipCode[i]);
                 apartmentComplex.push(apartmentInfo.apartmentComplex[i]);
+                url.push(apartmentInfo.url[i]);
             }
 
             printInfo(street, city, zipCode, apartmentComplex);
-            buildApartmentTable(street, city, zipCode, apartmentComplex);
+            buildApartmentTable(street, city, zipCode, apartmentComplex, url);
                         
         })
     });
@@ -69,7 +73,7 @@ function printInfo(street, city, zip, apartComplex)
     }
 }
 
-function buildApartmentTable(street, city, zip, apartmentComplex)
+function buildApartmentTable(street, city, zip, apartmentComplex, url)
 {
     let apartmentList = document.getElementById("apartmentTable");
     let address = "";
@@ -80,14 +84,21 @@ function buildApartmentTable(street, city, zip, apartmentComplex)
     // apartmentList.appendChild(listElements);
 
     list = document.getElementById("list");
-
+    let tempLink;
     for(let i = 0; i < street.length; i++)
     {
+        tempLink = document.createElement("a");
         address += " " + (i + 1) + ". " + street[i] + " " + city[i] + " " + zip[i] + " " + apartmentComplex[i] + "<br>";
+        tempLink.href = url[i];
+        console.log(url[i]);
+        tempLink.target = "_blank";
+        tempLink.innerHTML = address;
+        
+        list.appendChild(tempLink);
+        address = "";
     }
 
-    console.log(address);
-    list.innerHTML = address;
+    //list.innerHTML = address;
 }
 
 function clearList()

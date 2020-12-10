@@ -1,18 +1,27 @@
 // Variables reqired for running the express server
 const express = require("express");
 const bodyParser = require("body-parser");
+const session = require("express-session");
 
 const path = require("path");
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.raw());
+
+app.use(session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true
+}));
+
 const port = 8080;
 
 // Variables required for the mysql database
 const mysql = require("mysql");
 const { info } = require("console");
+const { request } = require("http");
+const { response } = require("express");
 
 const connection = mysql.createConnection({
     host: "localhost",
@@ -38,7 +47,40 @@ app.use(express.static(__dirname + "/assets"));
 
 //app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/index.html')));
 app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile(path.join(__dirname, '/login.html'));
+});
+
+app.post("/loginInfo", function(req, res){
+    let username = req.body.username;
+    let password = req.body.password;
+
+    if(username && password)
+    {
+        connection.query("SELECT * FROM users WHERE username = ? AND password = ?", [username, password], function(error, rows, fields){
+            if(rows.length > 0)
+            {
+                req.session.loggedin = true;
+                req.session.username = username;
+                res.redirect("/index.html");
+            }
+            else
+            {
+                res.send("Incorrect username and/or password!");
+                res.end();
+            }
+        });
+    }
+});
+
+app.get("/index.html", function(req, res){
+    if(req.session.loggedin)
+    {
+        res.sendFile(path.join(__dirname, '/index.html'));
+    }
+    else
+    {
+        res.redirect("/login.html");
+    }
 });
 
 app.post("/introForm", function(req, res){
@@ -48,13 +90,14 @@ app.post("/introForm", function(req, res){
     let cityInfo = [];
     let zipCodeInfo = [];
     let apartmentComplexInfo = [];
+    let urlInfo = [];
 
     let startQuery = "SELECT * FROM property";
     let cityQuery = "WHERE City = " + "'" + city + "'";
 
     let query = startQuery.concat(" ",cityQuery);
 
-    console.log(query);
+    //console.log(query);
 
     connection.query(query, function(err, rows, fields){
         if(err)
@@ -69,16 +112,19 @@ app.post("/introForm", function(req, res){
             cityInfo.push(rows[i].City);
             zipCodeInfo.push(rows[i].Zipcode);
             apartmentComplexInfo.push(rows[i].ApartmentComplex);
+            urlInfo.push(rows[i].URL)
         }
 
         let info = {
             "street": streetInfo,
             "city": cityInfo,
             "zipCode": zipCodeInfo,
-            "apartmentComplex": apartmentComplexInfo
+            "apartmentComplex": apartmentComplexInfo,
+            "url": urlInfo
         }
 
         //console.log(JSON.stringify(info));
+        console.log(info);
         res.send(info);
      });
 });
@@ -115,7 +161,8 @@ app.post("/housingForm", function(req, res){
     let cityInfo = [];
     let zipCodeInfo = [];
     let apartmentComplexInfo = [];
-   
+    let urlInfo = [];
+
     //info = JSON.stringify(req.body);
 
     connection.query(query, function(err, rows, fields){
@@ -131,15 +178,17 @@ app.post("/housingForm", function(req, res){
             cityInfo.push(rows[i].City);
             zipCodeInfo.push(rows[i].Zipcode);
             apartmentComplexInfo.push(rows[i].ApartmentComplex);
+            urlInfo.push(rows[i].URL);
         }
 
         let info = {
             "street": streetInfo,
             "city": cityInfo,
             "zipCode": zipCodeInfo,
-            "apartmentComplex": apartmentComplexInfo
+            "apartmentComplex": apartmentComplexInfo,
+            "url": urlInfo
         }
-
+        console.log(info);
         //console.log(JSON.stringify(info));
         res.send(info);
      });
