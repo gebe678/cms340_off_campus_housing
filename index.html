@@ -16,6 +16,7 @@
         <!-- External local javascript files-->
         <script src="javascript/formControl.js" defer></script>
         <script src="javascript/rangeSync.js" defer></script>
+        <script src="javascript/changeFormVisibility.js" defer> </script>
 
         <!--Custom code goes under this tag-->
         <title>Awesome Title</title>
@@ -27,72 +28,84 @@
         <!-- All Bootstrap content must be enclosed in a container div -->
         <div class="container">
             
-            <div class="modal" id="myModal" role="dialog">
-                <div class="modal-dialog">
+            <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog form-dark">
                 
                   <!-- Modal content-->
-                  <div class="modal-content">
+                  <div class="modal-content card card-image" style="background: url(pictures/sexyMan.jpg) no-repeat;">
+                    <!--Text Forrmat-->
+                    <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                      <!--Header-->
+                      <div class="modal-header text-center pb-4">
+                        <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel">
+                          <strong>Personalize your search!</strong> 
+                        </h3> <!--/.Text-->
+                      </div> <!--/.Header-->
+                    </div> <!--/.Text Format-->
                     
                     <div class="modal-body">
                       
-                    <!-- Main form for inputting user information into the system -->
-                    <form action="housingForm" method="POST" id="housingFilters">
-                        <div class="form-group">
-                            <label for="city">City:</label>
-                            <input type="text" name="city">
-                        </div> <!-- </form-group> -->
-                    
-                        <div class="form-group">
-                            <label for="zipCode">Zip Code:</label>
-                            <input type="text" name="zipCode">
-                        </div> <!-- </form-group> -->
-                    
-                        <div class="form-group">
-                            <label for="sqrFootage">Square Footage:</label>
-                            <input type="range" min="100" max="1500" value="997" id="sqrFootage" name="sqrFootage">
-                            <input type="number" min="100" max="1500" value="997" id="sqrFootageNum">
-                        </div> <!-- </form-group> -->
-                    
-                        <div class="form-group">
-                            <label for="numBeds">Number of Beds:</label>
-                            <input type="range" min="0" max="5" value=2 id="numBeds" name="numBeds">
-                            <input type="number" min="0" max="5" value="2" id="numBedsNum">
-                        </div> <!-- </form-group> -->
-                    
-                        <div class="form-group">
-                            <label for="numBaths">Number of Baths:</label>
-                            <input type="range" min="0" max="5" value="1" id="numBaths" name="numBaths">
-                            <input type="number" min="0" max="5" value="1" id="numBathsNum">
-                        </div> <!-- </form-group> -->
-                    
-                        <div class="form-group">
-                            <label for="monthlyPrice">Monthly Price:</label>
-                            <input type="range" min="981" max="1500" value="1200" id="monthlyPrice" name="monthlyPrice">
-                            <input type="number" min="981" max="1500" value="1200" id="monthlyPriceNum">
-                        </div> <!-- </form-group> -->
-                    
-                        <div class="form-group">
-                            <label for="parking">Parking :</label>
-                            <input type="checkbox" id="parking" name="parking">
-                        </div> <!-- </form-group> -->
-                    
-                        <div class="form-group">
-                            <label for="distanceFromRollins">Distance From Rollins:</label>
-                            <input type="range" min="0" max="20" value="10" id="distanceFromRollins" name="distanceFromRollins">
-                            <input type="number" min="0" max="20" value="10" id="distanceFromRollinsNum">
-                        </div> <!-- </form-group> -->
-                    
-                        <div class="form-group">
-                            <input type="submit">
-                        </div> <!-- </form-group> -->
-                    
-                    </form>
+                      <!-- Main form for inputting user information into the system -->
+                      <form action="housingForm" method="POST" id="housingFilters">
+                          <div class="form-group">
+                              <label for="city" class="text-white">City:</label>
+                              <input type="text" class="form-control" placeholder="Enter city" name="city">
+                              <small class="text-white" id="cityHelpBlock" class="form-text text-muted">
+                                City must be entered with proper capitalization of each word
+                              </small>
+                          </div> <!-- </form-group> -->
+                      
+                          <div class="form-group">
+                              <label for="zipCode" class="text-white">Zip Code:</label>
+                              <input type="text" class="form-control" placeholder="Enter zip code" name="zipCode">
+                          </div> <!-- </form-group> -->
+                      
+                          <div class="form-group">
+                              <label for="sqrFootage" class="text-white">Square Footage:</label>
+                              <input type="range" min="100" max="1500" value="997" id="sqrFootage" name="sqrFootage">
+                              <input type="number" min="100" max="1500" value="997" id="sqrFootageNum">
+                          </div> <!-- </form-group> -->
+                      
+                          <div class="form-group">
+                              <label for="numBeds" class="text-white">Number of Beds:</label>
+                              <input type="range" min="0" max="5" value=2 id="numBeds" name="numBeds">
+                              <input type="number" min="0" max="5" value="2" id="numBedsNum">
+                          </div> <!-- </form-group> -->
+                      
+                          <div class="form-group">
+                              <label for="numBaths" class="text-white">Number of Baths:</label>
+                              <input type="range" min="0" max="5" value="1" id="numBaths" name="numBaths">
+                              <input type="number" min="0" max="5" value="1" id="numBathsNum">
+                          </div> <!-- </form-group> -->
+                      
+                          <div class="form-group">
+                              <label for="monthlyPrice" class="text-white">Monthly Price:</label>
+                              <input type="range" min="981" max="1500" value="1200" id="monthlyPrice" name="monthlyPrice">
+                              <input type="number" min="981" max="1500" value="1200" id="monthlyPriceNum">
+                          </div> <!-- </form-group> -->
+                      
+                          <div class="form-group">
+                              <label for="parking" class="text-white">Parking :</label>
+                              <input type="checkbox" id="parking" name="parking">
+                          </div> <!-- </form-group> -->
+                      
+                          <div class="form-group">
+                              <label for="distanceFromRollins" class="text-white">Distance From Rollins:</label>
+                              <input type="range" min="0" max="20" value="10" id="distanceFromRollins" name="distanceFromRollins">
+                              <input type="number" min="0" max="20" value="10" id="distanceFromRollinsNum">
+                          </div> <!-- </form-group> -->
+                      
+                          <div class="form-group">
+                              <input type="submit">
+                          </div> <!-- </form-group> -->
+                      
+                      </form>
 
-                    </div>
+                    </div> <!--/.Modal Body-->
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-default" id="modalClose" data-dismiss="modal">Close</button>
                     </div>
-                  </div>
+                  </div> <!--./Modal Content-->
                   
                 </div>
               </div>
@@ -121,9 +134,8 @@
                               <ul class="navbar-nav mr-4">
   
                                   <li class="nav-item"> 
-                                      <a class="nav-link" data-toggle="modal" data-target="#myModal">Filters</a>
+                                      <a class="nav-link" data-toggle="modal" data-target="#myModal" id="filterButton">Filters</a>
                                   </li>
-  
                                   
                                   <li class="nav-item">
                                       <a class="nav-link" data-value="about" href="#">About</a>        
@@ -131,10 +143,7 @@
   
                                   <li class="nav-item">
                                       <a class="nav-link " data-value="portfolio"href="#">Portfolio</a>    
-                                  </li>
-                                  <li class="nav-item"> 
-                                     <a class="nav-link " data-value="blog" href="#">Blog</a>         
-                                  </li>   
+                                  </li>  
                                   <li class="nav-item">  
                                       <a class="nav-link " data-value="team" href="#">Team</a>       
                                   </li>  
@@ -151,7 +160,13 @@
                           <div class="description text-center col=md-4 col-md-offset-4">
                               <form action="introForm" method="post" id="introForm">
                                     <label for="city" style="color: rgb(0, 0, 0); background-color: white">Perfect Apartments For all College Students <br/> Affordable and Close</label>
-                                    <input type="text"  class="form-control form-control-lg" placeholder="Enter City" name="city">
+                                    
+                                    <div class="col-1:12">
+                                      <input type="text"  class="form-control form-control-lg" placeholder="Enter City" name="city">
+                                    </div>
+
+                                    
+                                    
                                     <input type="submit" class="btn btn-primary" id="introFormSubmit">
                                   </div>
                                   
